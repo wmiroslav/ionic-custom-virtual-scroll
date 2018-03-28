@@ -1,0 +1,8 @@
+{
+  "name": "Custom virtual scroll",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

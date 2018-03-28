@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Rendering: {{ visibleResults.length }}, all: {{ results.length }}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+
+
+<ion-list>
+    <div [style.height]="helperBeforeHeight + 'px'" style="width: 100%;"></div>
+
+        <ion-item *ngFor="let p of visibleResults;" style="height: 135px;">
+          <h1>{{ p.title }}</h1>
+          <p>{{ p.description }}</p>
+        </ion-item>
+
+    <div [style.height]="helperAfterHeight + 'px'" style="width: 100%;"></div>
+</ion-list>
+
+
+
+
+
+
+
+
+<ion-infinite-scroll [enabled]="!isLoading" (ionInfinite)="getData($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+</ion-infinite-scroll>
+
+
+
+</ion-content>
